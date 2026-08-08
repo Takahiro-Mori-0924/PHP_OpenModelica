@@ -25,7 +25,7 @@ shown directly. Instead, `plot_result.py` reads the `.mat` result file and
 renders a PNG chart that you can preview right in the VS Code editor.
 
 ```bash
-pip install DyMat matplotlib
+pip install DyMat matplotlib scipy
 python3 plot_result.py SimpleRC_res.mat Vc Vc.png
 ```
 
