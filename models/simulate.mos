@@ -1,4 +1,6 @@
 // OpenModelica script to check installation by simulating SimpleRC
 loadFile("SimpleRC.mo");
-simulate(SimpleRC, stopTime=0.01);
-val(Vc, 0.01);
+// Time constant tau = R*C = 1000 * 0.001 = 1s, so simulate for 5*tau to see
+// the full exponential charging curve (reaches ~99.3% of Vsource by t=5s).
+simulate(SimpleRC, stopTime=5);
+val(Vc, 5);
