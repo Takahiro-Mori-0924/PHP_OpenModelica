@@ -1,0 +1,4 @@
+// OpenModelica script to check installation by simulating SimpleRC
+loadFile("SimpleRC.mo");
+simulate(SimpleRC, stopTime=0.01);
+val(Vc, 0.01);
