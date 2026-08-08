@@ -17,3 +17,16 @@ generated `SimpleRC_res.mat` result file.
 
 Alternatively, open `SimpleRC.mo` in OMEdit (the OpenModelica graphical
 IDE) and click "Simulate".
+
+## Viewing results in Codespaces
+
+Codespaces has no display server, so OMEdit's native plot window can't be
+shown directly. Instead, `plot_result.py` reads the `.mat` result file and
+renders a PNG chart that you can preview right in the VS Code editor.
+
+```bash
+pip install DyMat matplotlib
+python3 plot_result.py SimpleRC_res.mat Vc Vc.png
+```
+
+Then open `Vc.png` in the file explorer to view the chart inline.
